@@ -1,0 +1,61 @@
+1.D
+2.
+3.D
+4.B
+5.B
+6.A
+7.B
+8.C
+
+9.A,B,D
+10.C,D
+
+11.
+
+
+A convex function: given any two points on the curve there will be no intersection with any other points,
+ for non convex function there will be at least one intersection.
+
+ In terms of cost function with a convex type you are always guaranteed to have a global minimum, 
+whilst for a non convex only local minima.
+
+12.
+When we optimize neural networks or any high dimensional function,
+ for most of the trajectory we optimize, the critical points(the points where the derivative is zero or close to zero) are saddle points.
+ Saddle points are unlike local minima, are easily escapable."
+
+In mathematics,A saddle point or minimax point is a point on the surface of the graph of a function where the slopes (derivatives) in orthogonal directions are all zero (a critical point),
+ but which is not a local extremum of the function.
+
+13.
+
+The main difference is in classical momentum you first correct your velocity and then make a big step according to that velocity (and then repeat), 
+But in Nesterov momentum, you first making a step into velocity direction and then make a correction to a velocity vector based on new location (then repeat).
+
+In classical physics, momentum is a simple product of mass and velocity. ... 
+The broadest form of Newton's second law is stated in terms of momentum. Momentum is conserved whenever the net external force on a system is zero. 
+This makes momentum conservation a fundamental tool for analyzing collisions.
+
+Momentum and Nesterov Momentum (also called Nesterov Accelerated Gradient/NAG) are slight variations of normal gradient descent that can speed up training and improve convergence significantly.
+
+14.
+Pre initialization of weights in neural networks:- 
+is a process of giving preference to neurons with higher weight which we think will make major impact on the model building process.
+
+We give higher weights to features with higher output influencing rate.
+Pre initialization of weights gives us a baseline neural network model for the given features.
+
+15.
+
+We define Internal Covariate Shift as the change in the distribution of network activations due to the change in network parameters during training.
+ In neural networks, the output of the first layer feeds into the second layer, the output of the second layer feeds into the third, and so on.
+
+When the parameters of a layer change, so does the distribution of inputs to subsequent layers.
+
+These shifts in input distributions can be problematic for neural networks, especially deep neural networks that could have a large number of layers.
+
+Batch normalization is a method intended to mitigate internal covariate shift for neural networks.
+
+
+
+

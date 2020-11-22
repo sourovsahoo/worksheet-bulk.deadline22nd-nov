@@ -1,0 +1,97 @@
+1.
+
+SELECT date(shippedDate)
+     , COUNT(id) AS num_orders_shipped
+     , AVG(order_total) AS daily_total
+  FROM [orders]
+ GROUP BY date(shippedDate)
+
+2.
+
+SELECT date(orderDate)
+     , COUNT(id) AS num_orders
+     , AVG(order_total) AS daily_total
+  FROM [orders]
+ GROUP BY date(orderDate)
+
+3.
+
+SELECT productName,MSRP
+   FROM products
+   WHERE MSRP = 
+    (SELECT MIN(MSRP) FROM products);
+
+4.
+
+SELECT productName, MIN(quantityinstock)
+FROM products
+GROUP BY productName
+
+5.
+
+SELECT TOP 1
+    productName
+ FROM products 
+ GROUP BY productName
+ ORDER BY COUNT(*) DESC
+
+6.
+
+SELECT MAX(COUNT(*))
+FROM CUST_ORDER
+GROUP BY CUSTOMER_ID;
+
+
+7.
+
+SELECT customers.customerNumber,
+customers.name, customers.city
+FROM customers
+WHERE customers.city = Melbourne city;
+
+8.
+
+select customerName 
+from customers
+where employee_name LIKE 'N%' 
+order by customerName ;
+
+9.
+
+select employeeNumber 
+from employees
+where employeeNumber LIKE '^7.*' AND OfficeCode LIKE 'Las Vegas'
+order by employeeNumber ;
+
+10.
+
+SELECT * FROM customers.new
+WHERE creditLimit < 1000;
+WHERE customers.new = 'Las Vegas'
+WHERE customers.new = 'Nantes'
+WHERE customers.new = 'Stavern' ;
+
+11.
+
+SELECT * FROM orderdetails
+WHERE quantityOrdered < 10;
+
+12.
+
+SELECT customers.customerName,
+orderdetails.orderNumber
+FROM customers,orderdetails
+WHERE customerName LIKE '%N';
+
+13.
+
+SELECT * FROM orders
+WHERE status ='Disputed';
+
+14.----------------------------------------
+
+15.
+
+SELECT * FROM payments
+WHERE amount > 1000 ;
+

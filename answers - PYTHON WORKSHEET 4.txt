@@ -1,0 +1,39 @@
+1.B
+2.B
+3.B
+4.D
+5.C
+6.---------
+7.C
+8.A
+9.A,B,D
+10.A,B,D
+11.
+
+Interpreter translates just one statement of the program at a time into machine code.
+Compiler scans the entire program and translates the whole of it into machine code at once.
+An interpreter takes very less time to analyze the source code. 
+However, the overall time to execute the process is much slower.
+
+Python is used as an interpreted language and not a compiled one,
+Although compilation is a step. 
+Python code, written in . py file is first compiled to what is called bytecode.
+
+12.
+
+PYTHONPATH is an environment variable which we can set to add additional directories where python will look for modules and packages.
+For most installations, we should not set these variables since they are not needed for Python to run.
+Python knows where to find its standard library.
+
+13.
+input:-
+
+s = '   abd cde   '
+s.strip()
+
+output:-
+'abd cde'
+
+.strip() function removes both leading(start) and trailing(end) white space charecters.
+But , lstrip() function removes only the leading(start) white space charecter.
+& , rstrip() function removes only the trailing(end) white space charecter.
